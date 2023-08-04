@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    {% if job_listings %}
+        <ul>
+            {% for job in job_listings %}
+                <li>{{ job.title }} - {{ job.location }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No job listings match your search criteria.</p>
+    {% endif %}
+</body>
+</html>
